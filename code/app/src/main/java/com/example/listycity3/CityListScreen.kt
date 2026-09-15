@@ -100,9 +100,11 @@ fun CityListScreen(
                     modifier = Modifier
                         .fillMaxWidth()
                         .clickable {
-                            onUpdateCity(city, City(newCityName, newProvinceName))
-                            newCityName = ""
-                            newProvinceName = ""
+                            if (newCityName.isNotBlank() && newProvinceName.isNotBlank()) {
+                                onUpdateCity(city, City(newCityName, newProvinceName))
+                                newCityName = ""
+                                newProvinceName = ""
+                            }
                         }
                         .padding(horizontal = 20.dp, vertical = 16.dp)
                 ) {
