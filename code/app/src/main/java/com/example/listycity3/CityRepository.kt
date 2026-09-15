@@ -16,6 +16,8 @@ class CityRepository {
         _cities.add(city)
     }
 
+    // Provided by lab instructions
+    // https://ualberta-cmput301.github.io/labs/lab3_inst.html
     fun updateCity(oldCity: City, updatedCity: City) {
         val index = _cities.indexOf(oldCity)
         if (index != -1) {
